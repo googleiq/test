@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS news_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE news_db;
+
+CREATE TABLE IF NOT EXISTS news (
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    title       VARCHAR(255) NOT NULL,
+    content     TEXT         NOT NULL,
+    image       VARCHAR(255) DEFAULT NULL,
+    category    VARCHAR(50)  NOT NULL,
+    created_at  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP
+);
